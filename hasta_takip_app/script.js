@@ -10,6 +10,10 @@ function save() {
 function createSchedule() {
   const container = document.getElementById("schedule");
 
+  if (!container) return; // 💥 KRİTİK KORUMA
+
+  container.innerHTML = ""; // tekrar yüklemede temizler
+
   days.forEach(day => {
     const dayDiv = document.createElement("div");
     dayDiv.className = "day";
@@ -47,4 +51,7 @@ function createSchedule() {
   });
 }
 
+window.onload = function () {
+  createSchedule();
+};
 createSchedule();
