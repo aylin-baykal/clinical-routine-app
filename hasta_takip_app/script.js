@@ -9,7 +9,12 @@ function save() {
 
 function createSchedule() {
   const container = document.getElementById("schedule");
-  if (!container) return;
+
+  // 🔥 KRİTİK DEBUG
+  if (!container) {
+    console.error("schedule bulunamadı");
+    return;
+  }
 
   container.innerHTML = "";
 
@@ -28,7 +33,9 @@ function createSchedule() {
       const slot = document.createElement("div");
       slot.className = "slot";
 
-      const info = data[key] ? `${data[key].name} - ${data[key].note}` : "Boş";
+      const info = data[key]
+        ? `${data[key].name} - ${data[key].note}`
+        : "Boş";
 
       slot.innerHTML = `<strong>${hour}</strong> ${info}`;
 
@@ -50,4 +57,5 @@ function createSchedule() {
   });
 }
 
-createSchedule();
+// 🔥 EN SAĞLAM ÇALIŞMA YÖNTEMİ
+document.addEventListener("DOMContentLoaded", createSchedule);
