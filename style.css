@@ -1,37 +1,53 @@
 body {
-  font-family: Arial;
-  background: linear-gradient(135deg, #ffe0ec, #e0f7fa);
+  font-family: Arial, sans-serif;
+  background: #f7f7fb;
+  margin: 0;
   padding: 20px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 h1 {
   text-align: center;
-  color: #ff6b9c;
+  color: #ff5c8a;
 }
 
+/* Gün kartı */
 .day {
   margin-top: 20px;
-  background: white;
   padding: 15px;
-  border-radius: 15px;
+  background: #fafafa;
+  border-radius: 12px;
 }
 
+.day h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Saat slotları */
 .slot {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px;
+  padding: 10px;
   margin: 5px 0;
-  background: #fff0f5;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
+  background: #e9ecef;
   transition: 0.2s;
 }
 
 .slot:hover {
-  background: #ffd6e8;
+  transform: scale(1.01);
+  background: #ffd6e7;
+}
+
+/* Dolu randevu */
+.slot strong {
+  color: #ff2d75;
 }
