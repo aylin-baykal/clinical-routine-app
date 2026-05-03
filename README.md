@@ -1,2 +1,2 @@
-# clinical-routine-app
-A simple clinical scheduling and exercise guidance system built to simulate real physiotherapy workflow.
+# physio-clinic-scheduler
+Simple physiotherapy clinic scheduling system with weekly appointment tracking.
