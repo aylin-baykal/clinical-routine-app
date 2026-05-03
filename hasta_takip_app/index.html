@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <title>Klinik Takip</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <div class="container">
   <h1>🩺 Klinik Randevu</h1>
 
   <div id="schedule"></div>
 </div>
 
+<script>
+  // Sayfa tamamen yüklendikten sonra çalışır
+  window.onload = function () {
+    if (typeof createSchedule === "function") {
+      createSchedule();
+    } else {
+      console.error("createSchedule bulunamadı");
+    }
+  };
+</script>
+
 <script src="script.js"></script>
+
 </body>
 </html>
