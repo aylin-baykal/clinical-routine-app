@@ -35,16 +35,28 @@ function createSchedule() {
 
       slot.innerHTML = `<strong>${hour}</strong> ${info}`;
 
-      slot.onclick = () => {
-        const name = prompt("Hasta adı:");
-        if (!name) return;
+     slot.onclick = () => {
+  const existing = data[key];
 
-        const note = prompt("Not / Tanı:");
+  if (existing) {
+    const confirmDelete = confirm("Bu randevuyu silmek ister misin?");
+    if (confirmDelete) {
+      delete data[key];
+      save();
+      location.reload();
+    }
+    return;
+  }
 
-        data[key] = { name, note };
-        save();
-        location.reload();
-      };
+  const name = prompt("Hasta adı:");
+  if (!name) return;
+
+  const note = prompt("Not / Tanı:");
+
+  data[key] = { name, note };
+  save();
+  location.reload();
+};
 
       dayDiv.appendChild(slot);
     });
