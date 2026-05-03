@@ -10,7 +10,6 @@ function save() {
 function createSchedule() {
   const container = document.getElementById("schedule");
 
-  // 🔥 KRİTİK DEBUG
   if (!container) {
     console.error("schedule bulunamadı");
     return;
@@ -24,7 +23,6 @@ function createSchedule() {
 
     const title = document.createElement("h3");
     title.innerText = day;
-
     dayDiv.appendChild(title);
 
     hours.forEach(hour => {
@@ -57,5 +55,5 @@ function createSchedule() {
   });
 }
 
-// 🔥 EN SAĞLAM ÇALIŞMA YÖNTEMİ
+// 🔥 TEK DOĞRU ÇALIŞMA YÖNTEMİ
 document.addEventListener("DOMContentLoaded", createSchedule);
