@@ -11,3 +11,6 @@ This is a simple web application built to simulate a real physiotherapy clinic s
 ## About
 I am a physiotherapist transitioning into software development. 
 This project reflects my interest in combining healthcare knowledge with digital solutions.
+
+## Live Demo
+https://aylin-baykal.github.io/clinical-routine-app/
