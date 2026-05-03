@@ -51,3 +51,21 @@ h1 {
 .slot strong {
   color: #ff2d75;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.slot {
+  background: #f1f3f5;
+  border-left: 5px solid transparent;
+}
+
+.slot:hover {
+  border-left: 5px solid #ff5c8a;
+}
+
+.slot strong {
+  display: inline-block;
+  width: 70px;
+}
