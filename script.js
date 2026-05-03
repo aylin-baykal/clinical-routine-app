@@ -29,7 +29,9 @@ function createSchedule() {
       const slot = document.createElement("div");
       slot.className = "slot";
 
-      const info = data[key] ? `${data[key].name} - ${data[key].note}` : "Boş";
+      const info = data[key]
+  ? `👤 ${data[key].name} | 📝 ${data[key].note}`
+  : "🟢 Boş";
 
       slot.innerHTML = `<strong>${hour}</strong> ${info}`;
 
