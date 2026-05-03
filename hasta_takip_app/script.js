@@ -1,4 +1,3 @@
-alert("çalıştı");
 const days = ["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
 const hours = ["09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00"];
 
@@ -10,10 +9,9 @@ function save() {
 
 function createSchedule() {
   const container = document.getElementById("schedule");
+  if (!container) return;
 
-  if (!container) return; // 💥 KRİTİK KORUMA
-
-  container.innerHTML = ""; // tekrar yüklemede temizler
+  container.innerHTML = "";
 
   days.forEach(day => {
     const dayDiv = document.createElement("div");
@@ -52,7 +50,4 @@ function createSchedule() {
   });
 }
 
-window.onload = function () {
-  createSchedule();
-};
 createSchedule();
